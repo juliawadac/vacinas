@@ -36,7 +36,8 @@ const VaccineSite: React.FC = () => {
   const pages: Record<string, PageData> = {
     home: {
       title: 'Início',
-      icon: <Syringe size={20} />,
+      icon: <Syringe size={20}
+        color='black' />,
       content: (
         <Stack spacing={4}>
           <Paper sx={{ bgcolor: 'success.main', color: 'white', borderRadius: 3, p: 4 }}>
@@ -82,8 +83,8 @@ const VaccineSite: React.FC = () => {
       icon: <Calendar size={20} />,
       content: (
         <Stack spacing={4}>
-          <Typography variant="h4" fontWeight="bold">Calendários de Vacinação</Typography>
-          
+          <Typography variant="h4" fontWeight="bold" color='black'>Calendários de Vacinação</Typography>
+
           <Paper sx={{ p: 3 }}>
             <Typography variant="h6" color="success.main" gutterBottom sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
               <ChevronRight size={20} />
@@ -160,8 +161,8 @@ const VaccineSite: React.FC = () => {
       icon: <Info size={20} />,
       content: (
         <Stack spacing={3}>
-          <Typography variant="h4" fontWeight="bold">Tipos de Vacinas</Typography>
-          
+          <Typography variant="h4" fontWeight="bold" color='black'>Tipos de Vacinas</Typography>
+
           <Paper sx={{ p: 3, borderLeft: '6px solid #2e7d32' }}>
             <Typography variant="h6" fontWeight="bold" gutterBottom>Vacinas Inativadas</Typography>
             <Typography paragraph>
@@ -235,8 +236,8 @@ const VaccineSite: React.FC = () => {
       icon: <BookOpen size={20} />,
       content: (
         <Stack spacing={4}>
-          <Typography variant="h4" fontWeight="bold">Educação e Informações</Typography>
-          
+          <Typography variant="h4" fontWeight="bold" color='black'>Educação e Informações</Typography>
+
           <Paper sx={{ p: 4, bgcolor: 'success.main', color: 'white', borderRadius: 2 }}>
             <Typography variant="h5" fontWeight="bold" gutterBottom>
               Como as vacinas funcionam?
@@ -381,13 +382,18 @@ const VaccineSite: React.FC = () => {
             {navigation.map((item) => (
               <ListItemButton
                 key={item.id}
+                selected={currentPage === item.id}
                 onClick={() => {
                   setCurrentPage(item.id);
-                  setSidebarOpen(false);
+                  setSidebarOpen && setSidebarOpen(false);
+                }}
+                sx={{
+                  color: 'black',
+                  '&.Mui-selected, &.Mui-selected:hover': { color: 'black' }
                 }}
               >
-                <ListItemIcon>{item.icon}</ListItemIcon>
-                <ListItemText primary={item.title} />
+                <ListItemIcon sx={{ color: 'black' }}>{item.icon}</ListItemIcon>
+                <ListItemText primary={item.title} primaryTypographyProps={{ color: 'black' }} />
               </ListItemButton>
             ))}
           </List>
@@ -397,10 +403,10 @@ const VaccineSite: React.FC = () => {
       {/* Sidebar Desktop */}
       <Box
         width={240}
-        sx={{ 
-          display: { xs: 'none', lg: 'flex' }, 
-          flexDirection: 'column', 
-          borderRight: 1, 
+        sx={{
+          display: { xs: 'none', lg: 'flex' },
+          flexDirection: 'column',
+          borderRight: 1,
           borderColor: 'divider',
           bgcolor: 'background.paper'
         }}
@@ -417,9 +423,20 @@ const VaccineSite: React.FC = () => {
               key={item.id}
               selected={currentPage === item.id}
               onClick={() => setCurrentPage(item.id)}
+              sx={{
+                color: 'black',
+                '& .MuiListItemIcon-root': { color: 'black' },
+                '& .MuiListItemText-root .MuiTypography-root': { color: 'black' },
+                '&.Mui-selected, &.Mui-selected:hover': {
+                  color: 'black',
+                  bgcolor: 'inherit',
+                  '& .MuiListItemIcon-root': { color: 'black' },
+                  '& .MuiListItemText-root .MuiTypography-root': { color: 'black' },
+                },
+              }}
             >
-              <ListItemIcon>{item.icon}</ListItemIcon>
-              <ListItemText primary={item.title} />
+              <ListItemIcon sx={{ color: 'black' }}>{item.icon}</ListItemIcon>
+              <ListItemText primary={item.title} primaryTypographyProps={{ color: 'black' }} />
             </ListItemButton>
           ))}
         </List>
