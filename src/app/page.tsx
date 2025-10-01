@@ -1,5 +1,4 @@
 'use client';
-/* eslint-disable react/no-unescaped-entities */
 import React, { useState } from 'react';
 import { Menu, X, Syringe, Calendar, Info, BookOpen, ChevronRight } from 'lucide-react';
 
@@ -298,7 +297,7 @@ const VaccineSite = () => {
           <div className="bg-gradient-to-r from-green-600 to-green-700 text-white rounded-xl p-8">
             <h2 className="text-2xl font-bold mb-4">Como as vacinas funcionam?</h2>
             <p className="text-lg opacity-90">
-              As vacinas ensinam o sistema imunológico a reconhecer e combater vírus e bactérias específicos. Quando você é vacinado, seu corpo cria uma "memória" imunológica que permite uma resposta rápida e eficaz caso entre em contato com a doença real.
+              As vacinas ensinam o sistema imunológico a reconhecer e combater vírus e bactérias específicos. Quando você é vacinado, seu corpo cria uma memória imunológica que permite uma resposta rápida e eficaz caso entre em contato com a doença real.
             </p>
           </div>
 
