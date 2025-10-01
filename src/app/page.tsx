@@ -1,5 +1,5 @@
-
 'use client';
+/* eslint-disable react/no-unescaped-entities */
 
 import React, { useState } from 'react';
 import {
@@ -45,7 +45,7 @@ const VaccineSite: React.FC = () => {
               Informações sobre Vacinas
             </Typography>
             <Typography variant="h6" sx={{ opacity: 0.9 }}>
-              Proteja sua saúde e de sua família com informações confiáveis sobre vacinação
+              {'Proteja sua saúde e de sua família com informações confiáveis sobre vacinação'}
             </Typography>
           </Paper>
 
@@ -69,10 +69,10 @@ const VaccineSite: React.FC = () => {
               Por que vacinar?
             </Typography>
             <Typography paragraph>
-              As vacinas são uma das formas mais eficazes de prevenção de doenças. Elas estimulam o sistema imunológico a produzir defesas contra vírus e bactérias específicos, protegendo você e toda a comunidade.
+              {'As vacinas são uma das formas mais eficazes de prevenção de doenças. Elas estimulam o sistema imunológico a produzir defesas contra vírus e bactérias específicos, protegendo você e toda a comunidade.'}
             </Typography>
             <Typography>
-              A vacinação em dia é essencial para erradicar doenças, como aconteceu com a varíola, e controlar outras como sarampo, poliomielite e rubéola.
+              {'A vacinação em dia é essencial para erradicar doenças, como aconteceu com a varíola, e controlar outras como sarampo, poliomielite e rubéola.'}
             </Typography>
           </Paper>
         </Stack>
@@ -145,7 +145,7 @@ const VaccineSite: React.FC = () => {
           <Paper sx={{ p: 3, bgcolor: 'success.main', color: 'white' }}>
             <Typography variant="h6">Como as vacinas funcionam?</Typography>
             <Typography>
-              As vacinas ensinam o sistema imunológico a reconhecer vírus e bactérias e criar memória imunológica.
+              {'As vacinas ensinam o sistema imunológico a reconhecer vírus e bactérias e criar memória imunológica.'}
             </Typography>
           </Paper>
           <Paper sx={{ p: 3 }}>
